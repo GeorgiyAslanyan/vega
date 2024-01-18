@@ -14,8 +14,9 @@ const Roadmap = () => {
       <h1 className="bg-clip-text w-fit text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-white to-slate-500">
         Roadmap
       </h1>
+      <Image width={1272} height={1217} alt="mobile" className="w-full h-full z-[7] flex md:hidden pointer-events-none relative" src="/roadmap.png"/>
       <object
-        className="w-full h-full z-[7] relative pointer-events-none"
+        className="w-full h-full z-[7] hidden md:block relative pointer-events-none"
         type="image/svg+xml"
         data="/roadmap.svg"></object>
     </motion.div>
