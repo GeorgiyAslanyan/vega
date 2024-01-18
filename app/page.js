@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex bg-[#010213] min-h-screen overflow-x-hidden flex-col items-center justify-between">
+    <main className="flex bg-[#010213] min-h-screen text-white overflow-x-hidden flex-col items-center justify-between">
       <div className="min-h-screen w-full relative">
         <div className="absolute w-full bottom-0 h-52 bg-gradient-to-t from-[#010213] to-transparent z-10 pointer-events-none"></div>
         <Scene />
