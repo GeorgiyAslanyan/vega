@@ -83,10 +83,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex md:hidden">
-      <Roadmap />
-      </div>
-      <div className="relative w-full hidden md:block">
+      <div className="relative w-full ">
       <Roadmap />
         <div className="absolute pointer-events-none hidden md:flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
@@ -99,7 +96,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute pointer-events-none hidden md:flex justify-start items-center top-0 left-0 w-full h-full z-[12]">
+        <div className="absolute pointer-events-none flex justify-start items-center top-0 left-0 w-full h-full z-[12]">
           <div className=" ">
             <Image
               alt="ellipse"
