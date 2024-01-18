@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Scene from "@/components/3d/Scene";
 import Hero from "@/components/Hero";
@@ -5,6 +6,7 @@ import Unique from "@/components/Unique";
 import Who from "@/components/Who";
 import Tokenomics from "@/components/Tokenomics";
 import Roadmap from "@/components/Roadmap";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -49,23 +51,35 @@ export default function Home() {
             />
           </div>
         </div>
-        
       </div>
-      <div className="mix-blend-plus-lighter flex justify-center items-center w-full h-0 z-[11]">
-          <div className="w-full h-full flex items-center">
-            <Image
-              alt="grid"
-              width="1920"
-              height="758"
-              className="w-full opacity-100"
-              src="/star.svg"
-            />
-          </div>
-        </div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="mix-blend-plus-lighter flex justify-center items-center w-full h-0 z-[11]">
+        <motion.div
+          initial={{ opacity: 0.9, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            repeat: Infinity,
+            repeatDelay: 0.3,
+            repeatType: "reverse",
+            duration: 1.5,
+          }}
+          className="w-full h-full flex items-center">
+          <Image
+            alt="grid"
+            width="1920"
+            height="758"
+            className="w-full opacity-100"
+            src="/star.svg"
+          />
+        </motion.div>
+      </motion.div>
       <Who />
       <div className="relative w-full ">
-      <Tokenomics />
-      <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <Tokenomics />
+        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"
@@ -78,8 +92,8 @@ export default function Home() {
         </div>
       </div>
       <div className="relative w-full ">
-      <Roadmap />
-      <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <Roadmap />
+        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"

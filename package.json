@@ -16,6 +16,7 @@
     "@theatre/core": "^0.5.1",
     "@theatre/r3f": "^0.5.1",
     "@theatre/studio": "^0.5.1",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
     "next": "14.0.4",
     "react": "^18",

@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const arr = [
   { number: 5, title: "Team" },
@@ -18,8 +19,12 @@ const Tokenomics = () => {
         Tokenomics
       </h1>
       <div className="grid grid-cols-3 gap-10">
-        {arr.map((el) => (
-          <div
+        {arr.map((el, index) => (
+          <motion.div
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 * index }}
+          viewport={{ once: true }}
             className="rounded-xl bg-gradient-to-br from-slate-500 overflow-hidden via-slate-800 to-slate-500 p-[2px]"
             key={el.title}>
             <div className="rounded-xl flex flex-col px-4 pt-6 pb-2 gap-4 justify-center items-center text-[20px] h-full w-full bg-slate-800">
@@ -28,7 +33,7 @@ const Tokenomics = () => {
               </p>
               <p className="">{el.title}</p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
