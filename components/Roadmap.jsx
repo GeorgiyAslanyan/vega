@@ -10,7 +10,7 @@ const Roadmap = () => {
     transition={{ duration: 0.6, delay: 0.2 }}
     viewport={{ once: true }}
       id="roadmap"
-      className="w-full z-[20] relative gap-6 px-0 lg:px-20 pb-0 md:pb-10 pt-20 md:pt-32 flex flex-col justify-center items-center text-center">
+      className="w-full z-[20] relative gap-6 px-0 lg:px-20 pb-4 md:pb-10 pt-20 md:pt-32 flex flex-col justify-center items-center text-center">
       <h1 className="bg-clip-text w-fit text-4xl md:text-5xl font-black text-transparent bg-gradient-to-r from-white to-slate-500">
         Roadmap
       </h1>
