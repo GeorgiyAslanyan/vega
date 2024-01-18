@@ -57,15 +57,7 @@ export default function Home() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
         className="mix-blend-plus-lighter flex justify-center items-center w-full h-0 z-[11]">
-        <motion.div
-          initial={{ opacity: 0.9, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            repeat: Infinity,
-            repeatDelay: 0.3,
-            repeatType: "reverse",
-            duration: 1.5,
-          }}
+        <div
           className="w-full h-full flex items-center">
           <Image
             alt="grid"
@@ -74,7 +66,7 @@ export default function Home() {
             className="w-full opacity-100"
             src="/star.svg"
           />
-        </motion.div>
+        </div>
       </motion.div>
       <Who />
       <div className="relative w-full ">

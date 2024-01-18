@@ -9,9 +9,15 @@ import {
 } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import React, { Suspense, useEffect, useRef, useState } from "react";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import {
+  Bloom,
+  EffectComposer,
+  KernelSize,
+  Resolution,
+} from "@react-three/postprocessing";
 import { Model } from "./Model";
 import gsap from "gsap";
+import { useControls } from "leva";
 
 // import { editable as e, SheetProvider } from "@theatre/r3f";
 // import studio from "@theatre/studio";
@@ -64,7 +70,7 @@ const Group = () => {
       <group position={[1.65, -1.66, -0.47]} rotation={[0, 2.8, 0.15]}>
         <group position={[-0.08, 0, 0.52]} rotation={[0.3, -0.64, 0.1]}>
           <group>
-          <Model />
+            <Model />
           </group>
         </group>
         <mesh scale={[0.7, 0.7, 0.7]} position={[100, -40, 0]}>
@@ -72,8 +78,8 @@ const Group = () => {
           <meshStandardMaterial
             emissiveIntensity={1.5}
             toneMapped={false}
-            emissive="#F3CCF3"
-            color={"white"}
+            emissive={"#adc4ff"}
+            color={"#0015de"}
           />
         </mesh>
       </group>
@@ -82,6 +88,13 @@ const Group = () => {
 };
 
 const Scene = () => {
+  // const { color, intensity } = useControls({
+  //   color: {
+  //     value: "#F3CCF3",
+  //   },
+  //   intensity: { value: 0.5, min: 0, max: 4, step: 0.01 },
+  // });
+
   return (
     <Suspense
       fallback={
@@ -109,7 +122,13 @@ const Scene = () => {
           <color args={["#010213"]} attach={"background"} />
           <directionalLight position={[0, 2, 0]} intensity={6} />
           <EffectComposer>
-            <Bloom luminanceThreshold={1} intensity={0.5} mipmapBlur />
+            <Bloom
+              luminanceThreshold={0}
+              intensity={0.72}
+              mipmapBlur
+              resolutionX={15}
+              resolutionY={15}
+            />
           </EffectComposer>
         </Canvas>
       </div>

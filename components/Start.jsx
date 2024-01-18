@@ -13,7 +13,7 @@ const Start = () => {
         className=" fixed flex items-center pointer-events-none justify-center bg-[#010213] top-0 left-0 w-screen h-screen z-[200] px-[10px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.6 }}
-          animate={{ opacity: 1, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 0.6 }}
           transition={{ ease: "easeOut", duration: 0.8, delay: 1 }}>
           <Image
             width={336}
