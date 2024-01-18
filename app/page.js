@@ -10,12 +10,12 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <main className="flex bg-[#010213] min-h-screen text-white overflow-x-hidden flex-col items-center justify-between">
+    <main className="flex bg-[#010213] min-h-screen text-white overflow-hidden flex-col items-center justify-between">
       <div className="min-h-screen w-full relative">
         <div className="absolute w-full bottom-0 h-52 bg-gradient-to-t from-[#010213] to-transparent z-10 pointer-events-none"></div>
         <Scene />
         <Hero />
-        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <div className="absolute pointer-events-none hidden md:flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"
@@ -29,7 +29,7 @@ export default function Home() {
       </div>
       <div className="relative w-full">
         <Unique />
-        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <div className="absolute pointer-events-none hidden md:flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"
@@ -40,7 +40,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[12]">
+        <div className="absolute pointer-events-none flex justify-center items-center top-0 left-0 w-full h-full z-[12]">
           <div className="w-full h-full">
             <Image
               alt="grid"
@@ -71,7 +71,7 @@ export default function Home() {
       <Who />
       <div className="relative w-full ">
         <Tokenomics />
-        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <div className="absolute pointer-events-none flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"
@@ -85,7 +85,7 @@ export default function Home() {
       </div>
       <div className="relative w-full ">
         <Roadmap />
-        <div className="absolute flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
+        <div className="absolute pointer-events-none flex justify-center items-center top-0 left-0 w-full h-full z-[11]">
           <div className=" ">
             <Image
               alt="ellipse"
@@ -96,7 +96,7 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="absolute flex justify-start items-center top-0 left-0 w-full h-full z-[12]">
+        <div className="absolute pointer-events-none flex justify-start items-center top-0 left-0 w-full h-full z-[12]">
           <div className=" ">
             <Image
               alt="ellipse"

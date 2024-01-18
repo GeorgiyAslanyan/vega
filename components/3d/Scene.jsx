@@ -38,7 +38,6 @@ const Group = () => {
   useEffect(() => {
     setMax(document.documentElement.clientWidth);
   }, []);
-
   useEffect(() => {
     setTimeout(() => {
       const handleMouseMove = (event) => {
@@ -67,7 +66,7 @@ const Group = () => {
   });
   return (
     <group ref={groupRef}>
-      <group position={[1.65, -1.66, -0.47]} rotation={[0, 2.8, 0.15]}>
+      <group position={widthScreen > 680 ? [1.65, -1.66, -0.47] : [-3.6, -2.3, 2.5]} rotation={widthScreen > 680 ? [0, 2.8, 0.15] : [-0.3, 3.10, 0.3]}>
         <group position={[-0.08, 0, 0.52]} rotation={[0.3, -0.64, 0.1]}>
           <group>
             <Model />
@@ -88,20 +87,11 @@ const Group = () => {
 };
 
 const Scene = () => {
-  // const { color, intensity } = useControls({
-  //   color: {
-  //     value: "#F3CCF3",
-  //   },
-  //   intensity: { value: 0.5, min: 0, max: 4, step: 0.01 },
-  // });
+  
 
   return (
     <Suspense
-      fallback={
-        <div className="h-screen w-full flex justify-center items-center">
-          <p className="lg:translate-x-60"></p>
-        </div>
-      }>
+      fallback={false}>
       <div className="w-full h-screen absolute top-0 left-0 z-0">
         <Canvas
           shadows={"soft"}
