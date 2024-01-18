@@ -4,7 +4,7 @@ const Who = () => {
   return (
     <div
       id="who"
-      className="w-full gap-6 px-20 py-32 flex flex-col justify-center items-center text-center">
+      className="w-full relative z-20 gap-6 px-20 py-32 flex flex-col justify-center items-center text-center">
       <h1 className="bg-clip-text w-fit text-5xl font-black text-transparent bg-gradient-to-r from-white to-slate-500">
         Who we are?
       </h1>

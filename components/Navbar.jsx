@@ -9,13 +9,13 @@ const Navbar = () => {
     <>
       <div className="fixed hidden md:flex z-50 items-center justify-between gap-5 text-white top-0 w-full bg-[#161825] bg-opacity-30 backdrop-blur-xl px-2 md:px-4 lg:px-10 py-5">
       <a
-          className="px-10 text-lg lg:text-xl py-1 ease-linear duration-100 transition-all"
-          href="https://www.dextools.io/app/en/ether/pairs"
+          className="px-10 items-center flex py-1 ease-linear duration-100 transition-all"
+          href="#about"
           target="_blank"
           rel="noopener noreferrer">
-          Vega
+          <Image width={83} height={36} alt="logo" src="/Vega.svg" className="h-full"/>
         </a>
-        <div className="flex gap-10 text-base uppercase lg:text-base">
+        <div className="flex gap-10 text-sm uppercase lg:text-sm">
           <a
             className="ease-linear duration-100 transition-all hover:-translate-y-1"
             href="#about">

@@ -54,7 +54,7 @@ const Group = () => {
 
   useFrame(() => {
     gsap.to(groupRef.current.rotation, {
-      y: cameraX * -0.05,
+      y: cameraX * 0.05,
       duration: 0.5,
       ease: "power2.out",
     });
@@ -72,7 +72,8 @@ const Group = () => {
           <meshStandardMaterial
             emissiveIntensity={1.5}
             toneMapped={false}
-            emissive="lightBlue"
+            emissive="#F3CCF3"
+            color={"white"}
           />
         </mesh>
       </group>
@@ -97,7 +98,7 @@ const Scene = () => {
           <Group />
           {/* </SheetProvider> */}
           <spotLight
-            color={"white"}
+            color={"#010213"}
             intensity={200}
             angle={1}
             penumbra={1}
@@ -105,12 +106,10 @@ const Scene = () => {
             castShadow
             shadow-bias={-0.0001}
           />
-          <color args={[0,0,0]} attach={"background"} />
+          <color args={["#010213"]} attach={"background"} />
           <directionalLight position={[0, 2, 0]} intensity={6} />
-          {/* <Environment preset="city" /> */}
-          {/* <OrbitControls /> */}
           <EffectComposer>
-            <Bloom luminanceThreshold={0.7} mipmapBlur />
+            <Bloom luminanceThreshold={1} intensity={0.5} mipmapBlur />
           </EffectComposer>
         </Canvas>
       </div>

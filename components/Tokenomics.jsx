@@ -13,9 +13,9 @@ const Tokenomics = () => {
   return (
     <div
       id="tokenomics"
-      className="w-full gap-6 px-20 py-32 flex flex-col justify-center items-center text-center">
+      className="w-full z-20 relative gap-6 px-20 py-3 flex flex-col justify-center items-center text-center">
       <h1 className="bg-clip-text w-fit text-5xl font-black text-transparent bg-gradient-to-r from-white to-slate-500">
-        Who we are?
+        Tokenomics
       </h1>
       <div className="grid grid-cols-3 gap-10">
         {arr.map((el) => (
