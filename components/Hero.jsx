@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         <p className="text-base sm:text-lg">
           Vega is token and part of unique ecosystem, comprising an Investment
-          Fund and a Marketing Consulting Agency. Also it is a part of amazing
+          Fund and Advising Agency. Also it is a part of amazing
           business model with real utility and revenue-generating potential.
         </p>
       </div>

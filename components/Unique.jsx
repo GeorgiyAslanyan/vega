@@ -16,7 +16,7 @@ const Unique = () => {
       </h1>
       <p className="text-base sm:text-lg max-w-[600px]">
         Token Buy-Back and Burn Strategy: Using 60% of Presale Funds to create
-        Investment Fund and Marketing Consulting Agency, 50% of their profits
+        Investment Fund and Advising Agency, 50% of their profits
         will be used to buy and burn Vega, reducing supply and increasing the
         token&apos;s value. Another 50% of profits will be reinvested.
       </p>
